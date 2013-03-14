@@ -1,4 +1,5 @@
 package com.digicap.QRCode;
+
 import org.jsoup.nodes.*;
 
 public class QRCode {
@@ -18,7 +19,8 @@ public class QRCode {
 	        if(!node.toString().equals("<br />"))
 	        {
 	        	//Replace "&nbsp" escape sequence with spaces
-	        	fullImage += node.toString().replace("&nbsp;", " ");
+	        	String line = node.toString().replace("&nbsp;"," ");
+        		fullImage += line;
 	        }
 	        else
 	        {
@@ -27,6 +29,14 @@ public class QRCode {
 	        }
 	    }
 	    return fullImage;
+	}
+	
+	public static String[] splitCodeByLine(String inputCode)
+	{
+		//List<String> output = new ArrayList<String>();
+		String [] output = inputCode.split("\n");
+		
+		return output;
 	}
 }
 

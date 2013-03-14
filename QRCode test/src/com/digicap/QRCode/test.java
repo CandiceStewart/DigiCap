@@ -7,6 +7,13 @@ public class test {
 	 */
 	public static void main(String[] args) {
 		
-		System.out.println(QRCode.getCode("This is a test string."));
+		String code = QRCode.getCode("This is ajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj test string.");
+		
+		String[] splitCode = QRCode.splitCodeByLine(code);
+		
+		for (int i=0;i<splitCode.length;i++)
+		{
+			System.out.println(splitCode[i]);
+		}
 	}
 }
