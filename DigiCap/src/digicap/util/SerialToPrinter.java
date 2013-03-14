@@ -11,7 +11,7 @@ import gnu.io.SerialPortEventListener;
 import java.util.Enumeration;
 
 
-public class SerialTest implements SerialPortEventListener {
+public class SerialToPrinter implements SerialPortEventListener {
 	SerialPort serialPort;
         /** The port we're normally going to use. */
 	private static final String PORT_NAMES[] = { 
@@ -107,8 +107,11 @@ public class SerialTest implements SerialPortEventListener {
 		System.out.println("Started");
 		Thread.sleep(1500);
 		byte[] bytes = (message+"\n").getBytes(); 
-		output.write(bytes);
-		Thread.sleep(2000);
+		
+		for (int i = 0; i < bytes.length; i++)
+			output.write(bytes[i]);
+		//output.write(bytes);
+		Thread.sleep(500);
 		close();
 	}
 	

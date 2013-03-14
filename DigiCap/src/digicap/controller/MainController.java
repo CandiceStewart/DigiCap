@@ -24,6 +24,7 @@ import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 
+import digicap.core.MomentPoster;
 import digicap.util.PrintController;
 
 /**
@@ -77,8 +78,11 @@ public class MainController extends HttpServlet {
 		else if (request.getParameter("moment_text") != null)
 		{
 			try {
-				PrintController PC = new PrintController();
-				PC.print(request.getParameter("moment_text"));
+				String message = request.getParameter("moment_text");
+				MomentPoster MP = new MomentPoster();
+				MP.generateMoment(message);
+				//PrintController PC = new PrintController();
+				//PC.print(request.getParameter("moment_text"));
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
