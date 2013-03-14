@@ -1,9 +1,5 @@
 package com.digicap.QRCode;
 
-import java.util.List;
-
-import org.jsoup.nodes.Document;
-
 public class test {
 
 	/**
@@ -12,7 +8,7 @@ public class test {
 	public static void main(String[] args) {
 		
 		
-		QRCode.getCode("http://github.com");
+		System.out.println(QRCode.getCode("http://github.comhttp://github.comhttphttp://github.comhttp://github.comhttp://github.comhttp://github.comhttp://github.comhttp://github.comhttp://github.com://github.comhttp://github.com"));
 
 	}
 }

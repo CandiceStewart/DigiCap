@@ -3,18 +3,31 @@ package com.digicap.QRCode;
 import java.net.URL;
 
 import org.jsoup.nodes.*;
-// org.apache.commons.lang.StringEscapeUtils;
 
 public class QRCode {
 
-	public static void getCode(String urlString) {
-		//Document derp = URLConnectionReader.getPage("http://asciiqr.com/index.php?i=&t=http://github.com");
-		Document derp = URLConnectionReader.getPage("http://localhost/parsetest.html");
+	public static String getCode(String urlString) {
+		Document derp = URLConnectionReader.getPage("http://asciiqr.com/index.php?i=&t=" + urlString);
+		//Document derp = URLConnectionReader.getPage("http://localhost/parsetest.html");
 		
-		Element elem = derp.getElementById("QRAscii");
+		Element div = derp.getElementById("QRAscii");
 		
-		System.out.println(elem.toString().replaceAll("<br />", "\n"));
-		//StringEscapeUtils util = new StringEscapeUtils();
+		int i = 0;
+		String fullImage = "";
+		
+	    for (Node node : div.childNodes()) {
+	        i++;
+	        if(!node.toString().equals("<br />"))
+	        {
+	        	fullImage += node.toString().replace("&nbsp;", " ");
+	        }
+	        else
+	        {
+	        	fullImage += "\n";
+	        }
+	    }
+	    
+	    return fullImage;
 	}
 	
 	
