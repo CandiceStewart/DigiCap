@@ -1,4 +1,4 @@
-package com.digicap.QRCode;
+package digicap.QRCode;
 
 public class test {
 

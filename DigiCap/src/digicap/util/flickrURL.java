@@ -1,4 +1,4 @@
-package com.digicap.util;
+package digicap.util;
 
 import org.jsoup.*;
 import org.jsoup.nodes.*;

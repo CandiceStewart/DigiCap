@@ -1,4 +1,4 @@
-package com.digicap.QRCode;
+package digicap.QRCode;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
