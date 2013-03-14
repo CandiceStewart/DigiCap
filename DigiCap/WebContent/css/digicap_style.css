@@ -1,0 +1,130 @@
+body {
+	
+	font-family: 'Century Gothic', sans-serif;
+	background-color:#F5F5F5;
+}
+
+p.big_text {
+	font-size:large;
+	padding:0;
+	margin:0;
+	color:#fe5858;
+}
+
+.digicap_button {
+	color:#fe5858;
+  	border: 1px solid #fe5858;
+  	font-weight: bold;
+}
+
+.digicap_button:hover { 
+  	color: #000000;
+  	border: 1px solid #000000;
+  	cursor: hand; cursor: pointer;
+}
+
+#wrapper {
+	width:100%;
+	height:100%;
+}
+
+#content {
+	width:100%;
+	margin:auto;
+}
+
+#logo {
+	margin:auto;
+	text-align:center;
+}
+
+#logo img {
+	width:200px;
+	height:200px;
+}
+
+#input_area {
+	width:650px;
+	margin-left:auto;
+	margin-right:auto;
+	height:260px;
+	border-radius:10px;
+	padding:20px;
+	background-color:#FFFFFF;
+	border-radius: 15px;
+	border:1px solid #B0B0B0;
+	 box-shadow: inset 0 15px 15px #E0E0E0, 0 15px 15px #E0E0E0;
+   -o-box-shadow: inset 0 5px 15px #E0E0E0, 0 15px 15px #E0E0E0;
+   -webkit-box-shadow: inset 0 5px 15px #E0E0E0, 0 15px 15px #E0E0E0;
+   -moz-box-shadow: inset 0 5px 15px #E0E0E0, 0 15px 15px #E0E0E0;
+}
+
+
+#or_partition {
+	width:5%;
+	float:left;
+	text-align:center;
+	padding:15px;
+}
+
+#or_partition img {
+	width:2px;
+	height:100px;
+	padding-top:5px;
+}
+
+#or_text {
+	color:#a5a5a5;
+}
+
+#text_moment {
+	padding-top:10px;
+	width:45%;
+	float:left;
+}
+
+
+#image_moment {
+	padding-top:10px;
+	float:left;
+	width:40%;
+	
+}
+
+
+#image_title {
+	padding-bottom:5px;
+}
+
+#image_button {
+	margin-top:5px;
+}
+
+#text_input {
+	resize:none;
+	width: 280px;
+	height:150px;
+	border: 1px solid #cccccc;
+	overflow:hidden;
+	font-size:large;
+	font-family: 'Didact Gothic', sans-serif;
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+
+#success {
+	margin:auto;
+	width:300px;
+	text-align:center;
+	background-color:#FFFFFF;
+	padding:10px;
+	margin-top:50px;
+	border-radius: 15px;
+	border:1px solid #B0B0B0;
+	 box-shadow: inset 0 15px 15px #E0E0E0, 0 15px 15px #E0E0E0;
+   -o-box-shadow: inset 0 5px 15px #E0E0E0, 0 15px 15px #E0E0E0;
+   -webkit-box-shadow: inset 0 5px 15px #E0E0E0, 0 15px 15px #E0E0E0;
+   -moz-box-shadow: inset 0 5px 15px #E0E0E0, 0 15px 15px #E0E0E0;
+}
