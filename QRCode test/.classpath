@@ -5,6 +5,5 @@
 	<classpathentry kind="lib" path="C:/Users/Fraser/Documents/GitHub/DigiCap/jsoup-1.7.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/Fraser/Documents/GitHub/DigiCap/commons-lang3-3.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Fraser/Downloads/commons-lang-2.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,16 +1,10 @@
 package com.digicap.QRCode;
-
-import java.net.*;
-import java.io.*;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-
 
 public class URLConnectionReader {
 	
     public static Document getPage(String urlString) {
-    	
     	try{
     		
     		Document doc = Jsoup.connect(urlString).get();
@@ -21,6 +15,5 @@ public class URLConnectionReader {
     		e.printStackTrace();
     		return null;
     	}
-        
     }
 }
