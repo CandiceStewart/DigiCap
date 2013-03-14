@@ -11,8 +11,8 @@ public class test {
 	 */
 	public static void main(String[] args) {
 		
-		Document derp = URLConnectionReader.getPage("http://asciiqr.com/index.php?i=&t=http://github.com");
-	
-		System.out.println(derp);
+		
+		QRCode.getCode("http://github.com");
+
 	}
 }
