@@ -10,18 +10,12 @@ import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.methods.PostMethod;
 
 
-
+/*
+	TwitterAPI class is created using Twitter api for which to interact with twitter 
+	Written by Giang Nguyen Truong
+*/
 public class TwitterAPI {
 	public TwitterAPI(){}
-	/*
-	 * update Twitter status bypassed status string, that will post to my twitter account
-	 * The reason I'm not using digicap account is whenever I tried to log in 
-	 * They always ask me are you human ? and i found it not very fun lol.
-	 * No worries I don't use twitter anyway :) 
-	 *  
-	 * 
-	 * Giang
-	 * */
 	public void updateTwitter(String status) throws HttpException, IOException{
 		status = statusFormat(status);
 		
@@ -41,7 +35,7 @@ public class TwitterAPI {
 	}
 	
 	/*
-	 * statusFormat will format status string ... 
+	 * statusFormat will format status string such as new line or space.
 	 * 
 	 * Giang 
 	 * */
