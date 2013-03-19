@@ -1,15 +1,17 @@
 package digicap.util;
 
-
-import java.net.URL;
+import com.rosaloves.bitlyj.Url;
+import static com.rosaloves.bitlyj.Bitly.*;
 
 import org.jsoup.nodes.*;
 
 public class QRCoder {
 
+	@SuppressWarnings("unused")
 	public static String getCode(String urlString) {
-		Document derp = URLConnectionReader.getPage("http://asciiqr.com/index.php?i=&t=" + urlString);
-		//Document derp = URLConnectionReader.getPage("http://localhost/parsetest.html");
+		Url url = as("synckt", "R_aef30d4dc6733fd0563f86302fcc4ceb").call(shorten(urlString));
+
+		Document derp = URLConnectionReader.getPage("http://asciiqr.com/index.php?i=&t=" + url.getShortUrl());
 		
 		Element div = derp.getElementById("QRAscii");
 		
@@ -28,13 +30,12 @@ public class QRCoder {
 	        }
 	    }
 	    
+	    fullImage = fullImage.replace("█", ",");
+	    fullImage = fullImage.replace("▄", ".");
+	    fullImage = fullImage.replace("▀", "/");
+	    fullImage = fullImage.replace(" ", ";");
+	    
 	    return fullImage;
-	}
-	
-	
-	
-	//URL url = new URL("http://asciiqr.com/index.php?i=&t=http://github.com");
-	
-	
+	}	
 }
 

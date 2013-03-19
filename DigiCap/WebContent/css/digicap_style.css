@@ -1,7 +1,8 @@
 body {
 	
 	font-family: 'Century Gothic', sans-serif;
-	background-color:#F5F5F5;
+	background-image:url('/DigiCap/img/bg_tile.png');
+	
 }
 
 p.big_text {
@@ -9,6 +10,21 @@ p.big_text {
 	padding:0;
 	margin:0;
 	color:#fe5858;
+}
+
+h1 {
+	color:#fe5858;
+	font-weight:100;
+}
+
+a:hover {
+ cursor:pointer;
+}
+
+#info {
+	margin:auto;
+	text-align:center;
+	padding-top:30px;
 }
 
 .digicap_button {
@@ -41,6 +57,12 @@ p.big_text {
 #logo img {
 	width:200px;
 	height:200px;
+}
+
+#info_content {
+	width:70%;
+	margin:auto;
+	text-align:center;
 }
 
 #input_area {

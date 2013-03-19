@@ -4,13 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Moment Posted!</title>
 </head>
 <body>
 <% 
+	//For some reason this wouldn't work as plain HTML..
 	out.println("<html>");
 	out.println("<head>");
-	out.println("<title>JSP File upload</title>");  
+	out.println("<title>Moment Posted!</title>");  
 	
 	out.println("<link rel='stylesheet' type='text/css' href='/DigiCap/css/digicap_style.css'>");
 	out.println("<link href='http://fonts.googleapis.com/css?family=Carrois+Gothic|Didact+Gothic' rel='stylesheet' type='text/css'>");

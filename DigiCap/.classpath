@@ -16,7 +16,6 @@
 	<classpathentry kind="lib" path="C:/Users/Sam/Desktop/commons-fileupload-1.2.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Sam/Desktop/commons-io-2.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Sam/Desktop/Libs for Http/commons-codec-1.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Sam/Desktop/Libs for Http/commons-logging-1.1.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Sam/Desktop/Libs for Http/fluent-hc-4.2.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Sam/Desktop/Libs for Http/httpclient-4.2.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Sam/Desktop/Libs for Http/httpclient-cache-4.2.3.jar"/>
@@ -24,5 +23,11 @@
 	<classpathentry kind="lib" path="C:/Users/Sam/Desktop/Libs for Http/httpmime-4.2.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Sam/Desktop/Libs for Http/RXTXcomm.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Sam/Documents/GitHub/DigiCap/jsoup-1.7.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sam/Downloads/bitlyj-2.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sam/Documents/GitHub/DigiCap/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sam/Documents/GitHub/DigiCap/commons-logging-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sam/Documents/GitHub/DigiCap/org.apache.commons.codec.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sam/Documents/GitHub/DigiCap/org.apache.commons.httpclient.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sam/Downloads/flickrapi-1.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

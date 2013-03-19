@@ -10,14 +10,20 @@ import gnu.io.SerialPortEvent;
 import gnu.io.SerialPortEventListener; 
 import java.util.Enumeration;
 
+/*
+ * Code sourced using an RXTX tutorial - changed accordingly
+ * RXTX: http://rxtx.qbang.org
+ * Actual tutorial not known
+ */
 
 public class SerialToPrinter implements SerialPortEventListener {
 	SerialPort serialPort;
-        /** The port we're normally going to use. */
 	private static final String PORT_NAMES[] = { 
 			"/dev/tty.usbserial-A9007UX1", // Mac OS X
 			"/dev/ttyUSB0", // Linux
 			"COM9", // Windows
+			//Ideally this would be a Wi-Fi connection, but for the purposes of this hack COM9 was used
+			//(Couldn't find a way to auto-find the Arduino
 	};
 	/**
 	* A BufferedReader which will be fed by a InputStreamReader 
@@ -25,18 +31,19 @@ public class SerialToPrinter implements SerialPortEventListener {
 	* making the displayed results codepage independent
 	*/
 	private BufferedReader input;
-	/** The output stream to the port */
+	//The output stream to the port
 	private OutputStream output;
-	/** Milliseconds to block while waiting for port open */
+	//Milliseconds to block while waiting for port open
 	private static final int TIME_OUT = 2000;
-	/** Default bits per second for COM port. */
+	//Default bits per second for COM port.
 	private static final int DATA_RATE = 19200;
 
+	@SuppressWarnings("rawtypes")
 	public void initialize() {
 		CommPortIdentifier portId = null;
 		Enumeration portEnum = CommPortIdentifier.getPortIdentifiers();
 
-		//First, Find an instance of serial port as set in PORT_NAMES.
+		//First, find an instance of serial port as set in PORT_NAMES.
 		while (portEnum.hasMoreElements()) {
 			CommPortIdentifier currPortId = (CommPortIdentifier) portEnum.nextElement();
 			for (String portName : PORT_NAMES) {
@@ -100,8 +107,16 @@ public class SerialToPrinter implements SerialPortEventListener {
 		// Ignore all the other eventTypes, but you should consider the other ones.
 	}
 
+	
+	/**
+	 * Custom method for printing DigiCap message to the printer
+	 * Converts message parameter to bytes and sends to COM port
+	 * 
+	 * @param message
+	 * @throws IOException
+	 * @throws InterruptedException
+	 */
 	public void printToSerial(String message) throws IOException, InterruptedException {
-		//SerialTest main = new SerialTest();
 		initialize();
 		
 		System.out.println("Started");
@@ -109,8 +124,9 @@ public class SerialToPrinter implements SerialPortEventListener {
 		byte[] bytes = (message+"\n").getBytes(); 
 		
 		for (int i = 0; i < bytes.length; i++)
+		{
 			output.write(bytes[i]);
-		//output.write(bytes);
+		}
 		Thread.sleep(500);
 		close();
 	}

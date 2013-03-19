@@ -8,14 +8,12 @@ import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
-import org.apache.commons.fileupload.FileUpload;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
@@ -41,7 +39,8 @@ public class UploadImage extends HttpServlet {
     */
   private static final String BASE_DIRECTORY = "D:/DigiCap/";
   
-  protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+  @SuppressWarnings({ "rawtypes", "deprecation" })
+protected void doPost(HttpServletRequest request, HttpServletResponse response) 
     throws ServletException, IOException {
 	  System.out.println("UPLOAD IMAGE INVOKED");
     boolean isMultipart = ServletFileUpload.isMultipartContent(request);
