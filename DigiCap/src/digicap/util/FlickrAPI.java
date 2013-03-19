@@ -22,14 +22,13 @@ import com.aetrion.flickr.uploader.Uploader;
 
 /**
  * Demonstrates the authentication-process.
- * <p>
  * 
  * If you registered API keys, you find them with the shared secret at your <a
  * href="http://www.flickr.com/services/api/registered_keys.gne">list of API
- * keys</a>
+ * keys
  * 
- * @author mago
- * @version $Id: AuthExample.java,v 1.6 2009/08/25 19:37:45 x-mago Exp $
+ * Flickr API tutorial from @author mago, Written by : Giang Nguyen Truong 
+ * 
  */
 public class FlickrAPI {
 	Flickr f;
@@ -47,7 +46,11 @@ public class FlickrAPI {
 			SAXException, FlickrException {
 	}
 
-
+	/*
+	 * Upload image into our flickr account by its local path 
+	 * 
+	 * Written by : Giang Nguyen Truong
+	 * */
 	@SuppressWarnings({ "deprecation", "unused" })
 	public void upload(String filename) throws ParserConfigurationException, IOException{
 		String apiKey = "486fd7d08b3503e4ec352b5d3d7dc12c";

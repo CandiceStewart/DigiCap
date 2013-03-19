@@ -10,18 +10,15 @@ import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.methods.PostMethod;
 
 
-
+/*
+ * TwitterAPI class is used to update Twitter status using yql request.
+ * YQL request will be processed via HTTP post method.  
+ *   
+ * Giang
+ * */
 public class TwitterAPI {
 	public TwitterAPI(){}
-	/*
-	 * update Twitter status bypassed status string, that will post to my twitter account
-	 * The reason I'm not using digicap account is whenever I tried to log in 
-	 * They always ask me are you human ? and i found it not very fun lol.
-	 * No worries I don't use twitter anyway :) 
-	 *  
-	 * 
-	 * Giang
-	 * */
+	
 	public void updateTwitter(String status) throws HttpException, IOException{
 		status = statusFormat(status);
 		
@@ -41,7 +38,7 @@ public class TwitterAPI {
 	}
 	
 	/*
-	 * statusFormat will format status string ... 
+	 * statusFormat will format status string such as space or new line  
 	 * 
 	 * Giang 
 	 * */
